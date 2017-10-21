@@ -1,0 +1,86 @@
+What is JAX-RS Injection:
+-------------------------
+
+BigBasket:
+----------
+/search/{brand}/{productName}
+
+
+bigBasket/search
+/CalvinKlein/
+bodyspray;quantity=2;category=mens?category=deodorants
+
+Search: Brand, product name, category , type
+
+Pathparams-mandatory
+QueryParams-optional
+MatrixParams-optional
+
+brand=buckaroo
+
+products=shoes, pants, shirts, ac
+
+/buckaroo ? fashion = latest fashions or all
+
+/buckaroo ; fashion = latest fashions or all
+
+/buckaroo shoes // category =women // size = 10 // ? fashion = latest fashions or all
+
+/buckroo/ac category=dual fan ? latest=fashion or all
+
+
+
+Inner search-matrix (optaional)
+Outer Search-Query params (optaional)
+
+
+http://localhost:8080/2.JAXRSInjection/resources/bigBasket/search
+
+brand
+product
+category
+quantity
+category
+
+
+lorel-perfumes (Body spray, Sent)
+
+http://localhost:8080/2.JAXRSInjection/resources/bigBasket/search
+/lorel/bodyspray;quantity=2;category=mens?category=perfumes
+
+slip("/")
+spli(";")
+
+rest/courier/
+rest/localvendorcourier/
+
+
+@Path(/courier)
+@ApplicationPath(/rest)
+class ApplicationSevletMapping extends Application {
+// invloke servletcontainer 
+}
+
+
+
+
+
+BigBasket:
+
+
+http://localhost:8083/2.JAXRSInjection/resources/bigBasket/search/lorel/bodyspray;quantity=2;category=mens?category=perfumes
+
+http://localhost:8083/2.JAXRSInjection/resources/bigBasket/search/lorel;quantity=2;category=mens/bodyspray?category=perfumes
+
+
+http://localhost:8083/2.JAXRSInjection/resources/bigBasket/search/lorel;quantity=2;category=mens/bodyspray?category=perfumes
+
+
+Cab Rides
+---------
+
+
+
+
+
+
